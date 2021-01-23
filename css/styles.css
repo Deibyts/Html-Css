@@ -31,6 +31,7 @@ h1 {
     /* Para transformar las fuentes (mayuscula) */
     /* text-transform: uppercase; */  
     color: white;
+    margin: 0;
 }
 
 h1 strong {
@@ -39,16 +40,39 @@ h1 strong {
 
 .hero {
     height: 300px;
-    background-image: url(../image/hero.jpg);
+    /* background-image: url(../image/hero.jpg); */
     background-color: #1b2127;
     /* Para colocar una dimecion a la imagen indicando un alto y un ancho */
-    background-size: 500px 300px ;
+    /* background-size: 500px 300px ; */
     /* Para que la imagen de ffondo no se repita */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     /* Para posicionar la imagen  */
-    background-position-x: right;
+    /* background-position-x: right; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.hero{
+    object-fit: cover;
+}
+
+.project {
+    /*border selec tiene que especificar el tamaño, stylo (tipo), color*/
+    /* border-top: 10px solid red;
+    border-right: 10px solid green;
+    border-left: 10px solid orange;
+    border-bottom: 10px solid pink; 
+    
+    /*Para ar un color a todo el biorder se debe dar un color tamaño stylo (tipo)*/
+    /*border-top-color: #105cbe;
+    border-top-width: 15px;
+    border-top-style: solid; */
+
+    border: 1px solid gray;
+    border-radius: 10px;
+}
 .project-details {
     width: 500px;
 }
@@ -60,9 +84,203 @@ h1 strong {
 .header {
     background-color: #1b2127;
     color: white;
+    display: flex;
+    /* align-items: center; */
+    height: 69.4px;
+    justify-content: space-between;
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+figure {
+    margin: 0;
+}
+
+.menu {
+    height: 69.4px;
 }
 
 .header a {
     color: white;
     text-decoration: none;
+}
+
+.header ol {
+    display: flex;
+    height: inherit;
+}
+
+.header ol li {
+    height: inherit;   
+}
+.header a {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    padding: 0 10px;
+}
+
+/*Elemento padre*/
+.flexbox{
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+}
+
+/*Elemento hijo*/
+.box {
+    width: 40px;
+    height: 40px;
+    border: 1px solid red;
+
+    /*Para que conserve el tamaño(ancho) para que 
+    no le afecte el flex del padre 
+    Dentro se colocara valores entre uno o sero para
+    indicarle cuanto queremos que afecte el flexbox del padre
+    flex-shrink: 1 o 0;*/
+    margin: 5px;
+    flex-shrink: 0;
+}
+
+.footer {
+    color: white;
+    background-color: #1b2127;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer img {
+    vertical-align: middle;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.event-list-title {
+    margin-left: 20px;
+    color: #026fff;
+}
+
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.event {
+    margin: 10px;
+    width: 480px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f4fbff;
+}
+
+.event img {
+    width: 480px;
+    height: 200px;
+    /*Para que la imagen no se deforme pero se recortara*/
+    object-fit: cover;
+}
+
+.event-detail {
+    margin: 20px 40px;
+    margin-top: -40px;
+    background-color: white;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.event-description {
+    text-align: left;
+}
+
+.event-url {
+    color: #026fff;
+    border:  1px solid #056fff;
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.contact {
+    background-color: #026fff;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social {
+
+}
+
+.social-link {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    background-size: 50px 50px;
+}
+
+.social-link.twitter {
+    background-image: url('../svg/icons8-twitter.svg');
+}
+
+.social-link.facebook {
+    background-image: url('../svg/icons8-facebook.svg');
+}
+
+.social-link.github {
+    background-image: url('../svg/icons8-github.svg');
+}
+
+.social-link.instagram {
+    background-image: url('../svg/icons8-instagram.svg');
+}
+
+.form-email input {
+    border-color: gray;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10 20px 10px 25px;
+    
+}
+
+.form-email button {
+    display: block;
+    background: transparent;
+    color: white;
+    padding: 10px 0px;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 10px;
+}
+
+.form-email h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
 }
